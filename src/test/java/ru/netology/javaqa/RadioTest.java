@@ -72,12 +72,39 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldNextStation0() {
+        Radio rd = new Radio();
+
+        rd.setCurrentStation(9);
+        rd.nextStation();
+
+        int expected = 0;
+        int actual = rd.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+
+    @Test
     public void shouldPrevStation() {
         Radio rd = new Radio();
 
         rd.setCurrentStation(2);
 
         int expected = 1;
+        int actual = rd.prevStation();
+
+        Assertions.assertEquals(actual, expected);
+
+    }
+
+    @Test
+    public void shouldPrevStation9() {
+        Radio rd = new Radio();
+
+        rd.setCurrentStation(0);
+
+        int expected = 9;
         int actual = rd.prevStation();
 
         Assertions.assertEquals(actual, expected);
