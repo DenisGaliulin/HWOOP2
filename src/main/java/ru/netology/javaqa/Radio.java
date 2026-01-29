@@ -7,13 +7,15 @@ public class Radio {
     private int minStation = 0;
     private int maxStation = sizeStation - 1;
 
+    public Radio() {
+    }
+
 
     public Radio(int sizeStation) {
         this.sizeStation = sizeStation;
         this.maxStation = sizeStation - 1;
 
     }
-
 
 
     public void setMaxVolume() {
